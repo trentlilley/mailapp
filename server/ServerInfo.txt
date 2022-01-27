@@ -1,0 +1,68 @@
+
+--- DEPENDENCIES ---
+
+Dependency: emailjs-imap-client
+provides all IMAP functionality for the project
+
+Dependency: express
+used to build the REST API in main.ts
+
+Dependency: mailparser
+needed to access the contents of messages without having
+to write our own parser
+
+Dependency: nedb
+embedded noSQL database for our project. Alternative was to use Django.
+
+Dependency: nodemailer
+provides all message-sending SMTP capabilities
+
+Dependency: nodemon
+monitors js source files for changes and automatically
+restarts the app when any changes are detected
+
+--- TERMS ---
+
+SMTP: simple mail transfer protocol, a data transmission format
+that allows secure sending and receiving of email
+
+IMAP: method of email access, the preferred method when your
+clients need to check emails from several different devices
+reading an email while using IMAP does not store the mail
+locally on your device, instead it is read from the server
+
+REST: software architectural style that developers apply to
+web programming APIs. Provides a standardized way for domains
+to make resources available across their websites and mobile
+apps while also making these resourecs available to devs. 
+Helps devs better organize digital resources as well as the
+operations that can be performed against them
+  1. Resources should be identifiable through URL name
+  2. Separation between client and server functions
+  3. Server shouldn't hold information about the client's state
+  4. Data in a response request must be labeled as cacheable or non-cacheable
+  5. layered system architecture
+  6. Servers should be able to send executable codes to the client when necessary
+
+Resource Methods: GET allows the server to find the data the
+client requests; PUT updates an entry in the database; POST
+creates a new entry in the database; DELETE deletes an entry
+in the database
+
+--- SCRIPTS ---
+
+Script: "compile": "npx tsc && node ./dist/main.js"
+Run Command: npm run compile
+Location: server/package.json
+Desciption: npx tsc compiles all the files in our server/src
+directory, && indicates we would also like to execute
+another command, node ./dist/main.js runs our server file
+that was compiled from main.ts
+
+Script: "dev": "node ./node_modules/nodemon/bin/nodemon.js -e ts --exec \"npm run compile\""
+Run Command: npm run dev
+Location: server/package.json
+Description: allows nodemon dependency to monitor changes to our js and json files,
+-e ts enables it to also do so for typescript files, --exec tells nodemon
+what to do when those files change, any time nodemon sees changes to our
+typescript files, it will run the compile script defined above

@@ -1,0 +1,35 @@
+--- DEPENDENCIES ---
+
+Dependency: normalize.css
+Ensures every browser has the same padding around agiven HTML
+element. These styles are applied to the app's styles
+automatically
+
+Dependency: material-UI
+provides react components to build the UI. These components
+are based on Google's material guidelines
+
+Dependency: react
+front-end framework that allows us to build UI components
+
+Dependency: Axios
+A library for server communications so that we don't have to deal with AJAX...
+
+--- TERMS ---
+
+AJAX: stands for asynchronous javascript and xml. It allows
+the UI to update in response to simple user interactions
+without reloading the entire webpage. These days, better 
+alternatives to AJAX exist.
+
+Axios: A promise-based HTTP client that works in browsers
+and node. It can connect to the request and response
+cycle to transform request and response data if necessary.
+
+Material-UI: a library of react components built on top of
+google's material design language. Has many useful pre-built
+components that can simply be imported into our code
+
+CSS Grid: allows assigning the main components of our webpage into
+rows and columns for easy organization.
+
