@@ -9,3 +9,4 @@
 - add functions to update contacts
 - fix css properties for top toolbar
 - improve UI design
+- remove node_modules from server and client directories of this repo
